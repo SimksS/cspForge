@@ -1,5 +1,94 @@
 {
   "HomePage": {
     "title": "Hello world!"
+  },
+  "CspForge": {
+    "step1": {
+      "title": "1. Select a Preset",
+      "description": "Start with a security level that fits your needs."
+    },
+    "step2": {
+      "title": "2. Configure Sources",
+      "description": "Add or remove domains and sources for your policy."
+    },
+    "step3": {
+      "title": "3. Toggle Directives",
+      "description": "Fine-tune your policy by enabling or disabling specific directives."
+    },
+    "generated":{
+      "title": "Generated CSP",
+      "description": "Your configured Content Security Policy."
+    },
+      "strict": {
+      "label": "Strict",
+      "description": "Most restrictive security policy, blocking most external sources."
+    },
+    "balanced": {
+      "label": "Balanced",
+      "description": "Balanced security policy, allowing some common external sources."
+    },
+    "permissive": {
+      "label": "Permissive",
+      "description": "Most permissive security policy, allowing many external sources."
+    },
+    "add": "Add",
+    "default-src": {
+      "label": "Default Source",
+      "description": "A fallback for other fetch directives."
+    },
+    "script-src": {
+      "label": "Script Source",
+      "description": "Specifies valid sources for JavaScript."
+    },
+    "style-src": {
+      "label": "Style Source",
+      "description": "Specifies valid sources for stylesheets."
+    },
+    "img-src": {
+      "label": "Image Source",
+      "description": "Specifies valid sources of images and favicons."
+    },
+    "font-src": {
+      "label": "Font Source",
+      "description": "Specifies valid sources for fonts via @font-face."
+    },
+    "connect-src": {
+      "label": "Connect Source",
+      "description": "Restricts URLs for script interfaces."
+    },
+    "frame-src": {
+      "label": "Frame Source",
+      "description": "Specifies valid sources for nested browsing contexts."
+    },
+    "media-src": {
+      "label": "Media Source",
+      "description": "Specifies valid sources for '<audio>' and '<video>'."
+    },
+    "object-src": {
+      "label": "Object Source",
+      "description": "Specifies valid sources for '<object>', '<embed>', etc."
+    },
+    "base-uri": {
+      "label": "Base URI",
+      "description": "Restricts URLs which can be used in a '<base>' element."
+    },
+    "form-action": {
+      "label": "Form Action",
+      "description": "Restricts URLs for form submissions."
+    },
+    "frame-ancestors": {
+      "label": "Frame Ancestors",
+      "description": "Specifies valid parents that may embed a page."
+    }
+  },
+  "Navbar":{
+    "home": "Home",
+    "howto": "How to use",
+    "whatsIs": "What is CSP Forge?"
+  },
+  "LocaleSwitcher": {
+    "label": "Select Language",
+    "en": "English",
+    "pt": "Portuguese"
   }
 }

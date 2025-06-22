@@ -1,5 +1,94 @@
 {
-    "HomePage": {
+  "HomePage": {
     "title": "Olá mundo!"
+  },
+  "CspForge": {
+    "step1": {
+      "title": "1. Selecione um valor predefinido",
+      "description": "Comece com um nível de segurança que atenda às suas necessidades."
+    },
+    "step2": {
+      "title": "2. Configure as Fontes",
+      "description": "Adicione ou remova domínios e fontes para sua política."
+    },
+    "step3": {
+      "title": "3. Ative ou Desative Diretivas",
+      "description": "Ajuste sua política ativando ou desativando diretivas específicas."
+    },
+    "generated": {
+      "title": "CSP Gerado",
+      "description": "Sua Política de Segurança de Conteúdo configurada."
+    },
+    "strict": {
+      "label": "Estrito",
+      "description": "Política de segurança mais rigorosa, bloqueando a maioria das fontes externas."
+    },
+    "balanced": {
+      "label": "Equilibrado",
+      "description": "Política de segurança equilibrada, permitindo algumas fontes externas comuns."
+    },
+    "permissive": {
+      "label": "Permissivo",
+      "description": "Política de segurança mais permissiva, permitindo muitas fontes externas."
+    },
+    "add": "Adicionar",
+    "default-src": {
+      "label": "Fonte Padrão",
+      "description": "Um valor padrão para outras diretivas de busca."
+    },
+    "script-src": {
+      "label": "Fonte de Script",
+      "description": "Especifica fontes válidas para JavaScript."
+    },
+    "style-src": {
+      "label": "Fonte de Estilo",
+      "description": "Especifica fontes válidas para folhas de estilo."
+    },
+    "img-src": {
+      "label": "Fonte de Imagem",
+      "description": "Especifica fontes válidas de imagens e favicons."
+    },
+    "font-src": {
+      "label": "Fonte de Fonte",
+      "description": "Especifica fontes válidas para fontes via @font-face."
+    },
+    "connect-src": {
+      "label": "Fonte de Conexão",
+      "description": "Restringe URLs para interfaces de script."
+    },
+    "frame-src": {
+      "label": "Fonte de Frame",
+      "description": "Especifica fontes válidas para contextos de navegação aninhados."
+    },
+    "media-src": {
+      "label": "Fonte de Mídia",
+      "description": "Especifica fontes válidas para '<audio>' e '<video>'."
+    },
+    "object-src": {
+      "label": "Fonte de Objeto",
+      "description": "Especifica fontes válidas para '<object>', '<embed>', etc."
+    },
+    "base-uri": {
+      "label": "URI Base",
+      "description": "Restringe URLs que podem ser usados em um elemento '<base>'."
+    },
+    "form-action": {
+      "label": "Ação de Formulário",
+      "description": "Restringe URLs para envio de formulários."
+    },
+    "frame-ancestors": {
+      "label": "Ancestrais de Frame",
+      "description": "Especifica pais válidos que podem incorporar uma página."
+    }
+  },
+  "Navbar":{
+    "home": "Home",
+    "howto": "Como usar",
+    "whatsIs": "O que é CSP Forge?"
+  },
+  "LocaleSwitcher": {
+    "label": "Selecionar Idioma",
+    "en": "Inglês",
+    "pt": "Português"
   }
 }
