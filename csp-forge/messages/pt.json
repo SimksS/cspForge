@@ -107,5 +107,9 @@
     "label": "Selecionar Idioma",
     "en": "Inglês",
     "pt": "Português"
+  },
+  "Metadata": {
+    "title": "CSP Forge – Gerador de Content Security Policy fácil e intuitivo",
+    "description": "Crie e gerencie políticas CSP com presets seguros, controle detalhado e uma interface pensada para desenvolvedores."
   }
 }

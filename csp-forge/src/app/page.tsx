@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import React from 'react';
-import { Button } from '@/components/ui/button';
 import { Button as MovingButton } from '@/components/ui/moving-border';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useTranslations } from 'next-intl';
@@ -10,6 +9,18 @@ import { ShieldCheck, BrainCircuit, Wrench } from 'lucide-react';
 import { ContainerScroll } from '@/components/ui/container-scroll-animation';
 import { Badge } from '@/components/ui/badge';
 import { Spotlight } from '@/components/ui/spotlight-new';
+
+
+import { getTranslations } from 'next-intl/server';
+
+export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+  const t = await getTranslations({ locale, namespace: 'Metadata' });
+
+  return {
+    title: t('title'),
+    description: t('description'),
+  };
+}
 
 export default function LandingPage() {
   const t = useTranslations('HomePage');
