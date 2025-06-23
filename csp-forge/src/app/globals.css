@@ -119,4 +119,13 @@
   body {
     @apply bg-background text-foreground;
   }
+  p:has(img) :is(em,img){
+    @apply !m-0 ;
+  }
+  p:has(img) em{
+    @apply text-right;
+  }
+  code{
+    @apply bg-[#4e4e5028] py-1.5 px-1 rounded-xs font-medium;
+  }
 }

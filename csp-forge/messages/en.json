@@ -1,6 +1,23 @@
 {
   "HomePage": {
-    "title": "Hello world!"
+    "title": "Build Secure Web Applications with CSP Forge",
+    "subtitle": "Effortlessly generate and manage Content Security Policies. Our tool simplifies CSP creation with presets, AI suggestions, and a user-friendly interface.",
+    "getStarted": "Get Started",
+    "learnMore": "Learn More",
+    "features": {
+      "tag": "Key Features",
+      "title": "Simplify Your Security Workflow",
+      "description": "CSP Forge is packed with features to make CSP management a breeze, from starting with sensible presets to getting intelligent, context-aware suggestions."
+     
+    },
+     "feature1": {
+        "title": "Secure Presets",
+        "description": "Start with Strict, Balanced, or Permissive presets to quickly establish a baseline security posture for your application."
+      },
+      "feature2": {
+        "title": "Easy Customization",
+        "description": "Easily add custom sources and toggle individual CSP directives to tailor the policy to your exact needs."
+      }
   },
   "CspForge": {
     "step1": {
@@ -15,11 +32,11 @@
       "title": "3. Toggle Directives",
       "description": "Fine-tune your policy by enabling or disabling specific directives."
     },
-    "generated":{
+    "generated": {
       "title": "Generated CSP",
       "description": "Your configured Content Security Policy."
     },
-      "strict": {
+    "strict": {
       "label": "Strict",
       "description": "Most restrictive security policy, blocking most external sources."
     },
@@ -81,7 +98,7 @@
       "description": "Specifies valid parents that may embed a page."
     }
   },
-  "Navbar":{
+  "Navbar": {
     "home": "Home",
     "howto": "How to use",
     "whatsIs": "What is CSP Forge?"

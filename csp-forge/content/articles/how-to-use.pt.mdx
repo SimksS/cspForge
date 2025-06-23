@@ -1,0 +1,62 @@
+---
+title: "Como Usar o CSP Forge"
+date: "2025-06-22"
+---
+
+Um guia passo a passo para criar uma Política de Segurança de Conteúdo (Content Security Policy) robusta para o seu site.
+
+<Section>
+    ## Passo 1: Selecione um valor predefinido
+
+    Comece com um nível de segurança básico. Você pode escolher entre três opções:
+
+    ### Estrito
+
+    Oferece o mais alto nível de segurança. Restringe a maioria dos recursos para serem carregados apenas da mesma origem ('self'). Recomendado para a maioria das aplicações.
+
+    ### Balanceado
+
+    Uma política mais moderada que permite carregar recursos de 'self', via HTTPS e de URIs de dados. Boa para sites que usam APIs externas ou CDNs.
+
+    ### Permissivo
+
+    Permite carregar recursos de qualquer fonte ('*'). Esta é a opção menos segura e deve ser usada com cautela, principalmente para desenvolvimento ou sites simples sem dados de usuários.
+</Section>
+
+<Section>
+## Passo 2: Configure as Fontes
+
+Especifique os domínios e fontes permitidos para o seu conteúdo.
+
+Na seção "Configurar Fontes", você pode adicionar URLs personalizadas para seus scripts, estilos, imagens e outros recursos. Por exemplo, se você usa o Google Fonts, adicione `'https://fonts.googleapis.com'` e `'https://fonts.gstatic.com'`. Você também pode remover qualquer fonte clicando no botão 'X' ao lado dela.
+
+</Section>
+
+<Section>
+    ## Passo 3: Ative ou Desative Diretivas
+
+    Ajuste sua política ativando ou desativando diretivas específicas.
+
+    As diretivas controlam de onde os recursos podem ser carregados. Cada alternância corresponde a uma diretiva CSP (por exemplo, `script-src`, `style-src`). Ative ou desative conforme a necessidade da sua aplicação. Desabilitar uma diretiva que seu pré-ajuste ativou tornará sua política mais restritiva para esse tipo de recurso.
+
+</Section>
+
+<Section>
+    ## Passo 4: Use a CSP Gerada
+
+    Sua CSP está pronta! Agora, implemente-a em sua aplicação.
+
+    A CSP gerada aparecerá na caixa "CSP Gerada" à direita. Clique no botão de copiar para copiá-la para sua área de transferência.
+
+    Você pode implementar a CSP de duas formas:
+
+    #### 1\. Cabeçalho HTTP (Recomendado)
+
+    Este é o método mais seguro. Configure seu servidor web para enviar um cabeçalho HTTP `Content-Security-Policy` com a política gerada como valor.
+
+    #### 2\. Meta Tag
+
+    Alternativamente, você pode adicionar uma meta tag na seção `<head>` das suas páginas HTML:  
+    `<meta http-equiv="Content-Security-Policy" content="...">` Substitua "..." pela sua CSP copiada. Note que algumas diretivas como `frame-ancestors` não são suportadas via meta tags.
+
+</Section>

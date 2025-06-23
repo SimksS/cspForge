@@ -1,0 +1,55 @@
+---
+title: "How to Use CSP Forge"
+date: "2025-06-22"
+---
+
+A step-by-step guide to creating a robust Content Security Policy for your website.
+<Section>
+## Step 1: Select a Preset
+
+Start with a baseline security level. You can choose from three presets:
+
+### Strict
+
+Provides the highest level of security. It restricts most resources to be loaded from the same origin ('self'). This is recommended for most applications.
+
+### Balanced
+
+A more moderate policy that allows loading resources from 'self', over HTTPS, and from data URIs. Good for sites that use external APIs or CDNs.
+
+### Permissive
+
+Allows loading resources from any source ('\*'). This is the least secure option and should be used with caution, primarily for development or simple websites with no user data.
+</Section>
+<Section>
+## Step 2: Configure Sources
+
+Specify the allowed domains and sources for your content.
+
+In the "Configure Sources" section, you can add custom URLs for your scripts, styles, images, and other resources. For example, if you use Google Fonts, you would add `'https://fonts.googleapis.com'` and `'https://fonts.gstatic.com'`. You can also remove any source by clicking the 'X' button next to it.
+</Section>
+<Section>
+## Step 3: Toggle Directives
+
+Fine-tune your policy by enabling or disabling specific directives.
+
+Directives control where resources can be loaded from. Each switch corresponds to a CSP directive (e.g., `script-src`, `style-src`). Toggle them based on your application's needs. Disabling a directive that your preset enabled will make your policy more restrictive for that resource type.
+</Section>
+<Section>
+## Step 4: Use the Generated CSP
+
+Your CSP is ready! Now, implement it in your application.
+
+The generated CSP will appear in the "Generated CSP" box on the right. Click the copy button to copy it to your clipboard.
+
+You can implement the CSP in two ways:
+
+#### 1\. HTTP Header (Recommended)
+
+This is the most secure method. Configure your web server to send a `Content-Security-Policy` HTTP header with the generated policy as its value.
+
+#### 2\. Meta Tag
+
+Alternatively, you can add a meta tag to the `<head>` section of your HTML pages:  
+`<meta http-equiv="Content-Security-Policy" content="...">`Replace "..." with your copied CSP. Note that some directives like `frame-ancestors` are not supported via meta tags.
+</Section>

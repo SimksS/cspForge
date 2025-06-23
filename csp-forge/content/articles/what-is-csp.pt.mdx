@@ -1,9 +1,11 @@
+import { Callout } from '@/components/Callout'
+
 ---
-title: "🔐 O que é CSP? (Content Security Policy)"
+title: "O que é CSP? (Content Security Policy)"
 date: "2025-06-22"
 ---
 
-
+![Imagem CSP](/csp_article.png)
 
 ## Um Guardião Digital Super Inteligente para o seu Site
 
@@ -20,7 +22,10 @@ Seu **site** é como essa casa. Ele é construído com vários "módulos" e "fer
 
 ---
 
-## 🕵️‍♂️ Apresentando o CSP: Seu Segurança e Arquiteto de Confiança
+## Apresentando o CSP: Seu Segurança e Arquiteto de Confiança
+
+![Como o CSP funciona](/how_it_works.png)
+
 
 O **CSP**, ou **Content Security Policy** (que em português significa **Política de Segurança de Conteúdo**), é muito mais do que um segurança. Ele é como um **arquiteto de segurança** que projeta as regras de entrada e saída, e um **fiscal rigoroso** que garante que tudo esteja de acordo com o plano.
 
@@ -41,7 +46,7 @@ Pense no XSS como um "Cavalo de Troia" digital. Um invasor consegue injetar um c
 
 ---
 
-## 🛡️ Como o CSP Protege Meu Site na Prática?
+## Como o CSP Protege Meu Site na Prática?
 
 O CSP funciona como uma **lista de permissões muito detalhada e restritiva**. Ele não apenas diz "quem pode entrar", mas também "de onde pode vir cada tipo de coisa".
 
@@ -58,15 +63,22 @@ Ele faz isso enviando uma "diretriz" para o navegador do usuário (como Chrome, 
 
 ---
 
-## 📝 Dissecando uma Regra CSP: Entendendo as Partes
+## Dissecando uma Regra CSP: Entendendo as Partes
 
 Vamos olhar novamente para um exemplo, mas agora explicando cada pedacinho. Não se assuste com os termos, o importante é entender a lógica!
-
-Content-Security-Policy: default-src 'self'; script-src 'self' https://cdn.exemplo.com; img-src 'self' data:; style-src 'self' 'unsafe-inline'; font-src 'self' https://fonts.gstatic.com; connect-src 'self' https://www.google.com/url?sa=E&amp;source=gmail&amp;q=api.meusite.com; object-src 'none';
-
+```http
+Content-Security-Policy:
+  default-src 'self';
+  script-src 'self' https://cdn.examplo.com;
+  img-src 'self' data:;
+  style-src 'self' 'unsafe-inline';
+  font-src 'self' https://fonts.gstatic.com;
+  connect-src 'self' api.meusite.com;
+  object-src 'none';
+```
 Isso pode parecer um monte de código, mas vamos traduzir:
 
-* `Content-Security-Policy:`: Isso é apenas o "nome" da regra que o navegador vai procurar.
+* `Content-Security-Policy: ` : Isso é apenas o "nome" da regra que o navegador vai procurar.
 * `default-src 'self';`:
     * **`default-src`**: Esta é a diretiva mais importante. Ela define uma política padrão para todos os tipos de recursos que não têm uma diretiva específica.
     * **`'self'`**: Significa que o recurso só pode ser carregado do **mesmo domínio** do seu site. Se seu site é `meusite.com`, então `script.js` de `meusite.com/js/script.js` está permitido, mas `script.js` de `outrosite.com` não estaria, a menos que especificado em outra diretiva.
@@ -104,7 +116,7 @@ Isso pode parecer um monte de código, mas vamos traduzir:
 
 ---
 
-## 🚀 Implementando o CSP: Onde ele Vive?
+## Implementando o CSP: Onde ele Vive?
 
 O CSP é geralmente configurado de duas maneiras principais:
 
@@ -117,7 +129,7 @@ O CSP é geralmente configurado de duas maneiras principais:
 
 ---
 
-## 📈 O CSP Não é Uma Bala de Prata, Mas Uma Armadura Essencial
+## O CSP Não é Uma Bala de Prata, Mas Uma Armadura Essencial
 
 É importante entender que o CSP é uma **ferramenta de defesa poderosa**, mas não é a única coisa que você precisa para ter um site seguro. Ele trabalha em conjunto com outras boas práticas de segurança, como:
 
@@ -127,3 +139,8 @@ O CSP é geralmente configurado de duas maneiras principais:
 * Fazer auditorias de segurança regulares.
 
 Pense no CSP como a armadura mais moderna para seu site. Ela protege contra muitos golpes, mas você ainda precisa de um bom escudo e uma boa espada para se defender completamente! É uma camada crucial de proteção que ajuda a mitigar os riscos de forma proativa.
+
+<Callout>
+Quer criar sua própria Content Security Policy?  
+Experimente nosso <Link href="/csp-generator" className="underline font-semibold text-white">CSP Forge</Link> e crie sua política em segundos!
+</Callout>

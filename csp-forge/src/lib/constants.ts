@@ -54,6 +54,6 @@ export const presetUrls: Record<string, string[]> = {
     },
     {
       name: "whatsIs",
-      link: "/what-is-csp-forge",
+      link: "/articles/what-is-csp",
     },
   ];
