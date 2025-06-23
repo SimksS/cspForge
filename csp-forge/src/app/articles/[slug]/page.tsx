@@ -35,11 +35,14 @@ export default async function ArticlePage({ params }: { params: { slug: string }
         },
       }
     });
-    return (
-      <article className="prose prose-code:before:hidden prose-code:after:hidden dark:prose-invert max-w-screen-lg mx-auto py-8">
-        <h1>{data.title}</h1>
-       {mdxSource.content}
-      </article>
+      return (
+        <main className='flex-1 min-h-screen p-36'>
+                <article className="prose prose-code:before:hidden prose-code:after:hidden dark:prose-invert max-w-screen-lg mx-auto py-8">
+                    <h1>{data.title}</h1>
+                {mdxSource.content}
+                </article>
+              
+        </main>
     );
   } catch (e) {
     notFound();

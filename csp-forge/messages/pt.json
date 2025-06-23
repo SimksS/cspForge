@@ -1,13 +1,14 @@
 {
   "HomePage": {
     "title": "Construa Aplicações Web Seguras com o CSP Forge",
-    "subtitle": "Gere e gerencie Políticas de Segurança de Conteúdo com facilidade. Nossa ferramenta simplifica a criação de CSP com predefinições, sugestões de IA e uma interface amigável.",
+    "subtitle": "Uma ferramenta prática e acessível para gerar Content Security Policies personalizadas, com predefinições inteligentes e uma interface intuitiva.",
     "getStarted": "Começar",
     "learnMore": "Saiba Mais",
+       "image": "/csp_forge_pt.png",
     "features": {
       "tag": "Principais Funcionalidades",
       "title": "Simplifique Seu Fluxo de Segurança",
-      "description": "O CSP Forge está repleto de recursos para facilitar o gerenciamento de CSP, desde o início com predefinições sensatas até sugestões inteligentes e contextuais."
+      "description": "O CSP Forge reúne tudo o que você precisa para criar e ajustar suas políticas CSP: predefinições inteligentes, controle detalhado e uma interface pensada para desenvolvedores."
     },
     "feature1": {
       "title": "Predefinições Seguras",
@@ -98,7 +99,7 @@
     }
   },
   "Navbar":{
-    "home": "Home",
+    "home": "Gerar CSP",
     "howto": "Como usar",
     "whatsIs": "O que é CSP?"
   },

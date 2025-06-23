@@ -19,7 +19,7 @@ import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
 import { useToast } from "@/hooks/use-toast";
 import { cspDirectives, presetUrls,presets } from "@/lib/constants";
-
+import { toast } from "sonner"
 
 
 
@@ -30,7 +30,6 @@ export function CspGenerator() {
   const [newUrl, setNewUrl] = useState("");
   const [directiveStates, setDirectiveStates] = useState<Record<string, boolean>>(presets.Strict);
   const [generatedCsp, setGeneratedCsp] = useState("");
-  const { toast } = useToast();
 
   useEffect(() => {
     setDirectiveStates(presets[preset]);
@@ -68,9 +67,12 @@ export function CspGenerator() {
   };
   
   const handleCopy = () => {
+ 
     navigator.clipboard.writeText(generatedCsp)
-      .then(() => toast({ title: "Copied to clipboard!", description: "CSP has been copied successfully." }))
-      .catch(() => toast({ variant: "destructive", title: "Copy failed", description: "Could not copy CSP to clipboard." }));
+      .then(() =>    toast("Copied to clipboard!", {
+      description: "CSP has been copied successfully.",
+    }))
+      .catch(() => toast.error("Copy failed", {description: "Could not copy CSP to clipboard."} ));
   };
 
  

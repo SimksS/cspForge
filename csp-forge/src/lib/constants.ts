@@ -46,11 +46,11 @@ export const presetUrls: Record<string, string[]> = {
   export const navItems = [
     {
       name: "home",
-      link: "/",
+      link: "/generate",
     },
     {
       name: "howto",
-      link: "/how-to-use",
+      link: "/articles/how-to-use",
     },
     {
       name: "whatsIs",

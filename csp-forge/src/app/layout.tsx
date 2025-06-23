@@ -3,6 +3,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import {NextIntlClientProvider} from 'next-intl';
 import {getLocale} from 'next-intl/server';
 import "./globals.css";
+import { Toaster } from "@/components/ui/sonner"
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -41,6 +42,7 @@ export default async function RootLayout({
           <NextIntlClientProvider>
             <NavbarDemo/>
             {children}
+              <Toaster />
           </NextIntlClientProvider>
           </ThemeProvider>
       </body>
