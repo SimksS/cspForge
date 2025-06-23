@@ -17,7 +17,6 @@ import { Label } from "@/components/ui/label";
 import { Switch } from "@/components/ui/switch";
 import { Tabs, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { Textarea } from "@/components/ui/textarea";
-import { useToast } from "@/hooks/use-toast";
 import { cspDirectives, presetUrls,presets } from "@/lib/constants";
 import { toast } from "sonner"
 

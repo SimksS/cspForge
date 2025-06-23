@@ -10,11 +10,13 @@ import { ShieldCheck, BrainCircuit, Wrench } from 'lucide-react';
 import { ContainerScroll } from '@/components/ui/container-scroll-animation';
 import { Badge } from '@/components/ui/badge';
 import { Spotlight } from '@/components/ui/spotlight-new';
+import { getUserLocale } from '@/services/locale';
 
 
 
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata() {
+    const locale = await getUserLocale();
   const t = await getTranslations({ locale, namespace: 'Metadata' });
 
   return {

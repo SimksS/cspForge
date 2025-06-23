@@ -11,9 +11,13 @@ import Callout from '@/components/Callout';
 import Link from 'next/link';
 import Section from '@/components/Section';
 
-export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
+
+
+export async function generateMetadata({ params }: {
+  params: Promise<{ slug: string }>
+} ): Promise<Metadata> {
   const locale = await getUserLocale();
-    const { slug } = await params; 
+  const { slug } = await params;
   const filePath = join(process.cwd(), 'content', 'articles', `${slug}.${locale}.mdx`);
 
   try {
@@ -32,8 +36,10 @@ export async function generateMetadata({ params }: { params: { slug: string } })
   }
 }
 
-export default async function ArticlePage({ params }: { params: { slug: string } }) {
-    const { slug } = await params; 
+export default async function ArticlePage({ params }:  {
+  params: Promise<{ slug: string }>
+}) {
+     const { slug } = await params; 
     const locale = await getUserLocale();
 
   const filePath = join(process.cwd(), 'content', 'articles', `${slug}.${locale}.mdx`);

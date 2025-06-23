@@ -2,9 +2,11 @@
 
 
 import { CspGenerator } from "@/sections/CSPGenerator";
+import { getUserLocale } from "@/services/locale";
 import { getTranslations } from 'next-intl/server';
 
-export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
+export async function generateMetadata() {
+  const locale = await getUserLocale();
   const t = await getTranslations({ locale, namespace: 'CSPGenerate' });
 
   return {
