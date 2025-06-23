@@ -4,7 +4,7 @@ import {NextIntlClientProvider} from 'next-intl';
 import {getLocale} from 'next-intl/server';
 import "./globals.css";
 import { Toaster } from "@/components/ui/sonner"
-
+import { ProgressBar } from "@/components/ProgressBar";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -27,24 +27,25 @@ export default async function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-    const locale = await getLocale();
+  const locale = await getLocale();
   return (
     <html lang={ locale} suppressHydrationWarning>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-          <NextIntlClientProvider>
-            <NavbarDemo/>
-            {children}
-              <Toaster />
+        >
+        <NextIntlClientProvider>
+          <ThemeProvider
+              attribute="class"
+              defaultTheme="system"
+              enableSystem
+              disableTransitionOnChange
+            >
+            <NavbarDemo />
+             <ProgressBar />
+              {children}
+                <Toaster />
+            </ThemeProvider>
           </NextIntlClientProvider>
-          </ThemeProvider>
       </body>
     </html>
   );

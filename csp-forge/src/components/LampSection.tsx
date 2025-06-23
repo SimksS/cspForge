@@ -1,13 +1,10 @@
-"use client";
-import React from "react";
-import { motion } from "motion/react";
-import { cn } from "@/lib/utils";
 import { LampContainer } from "@/components/ui/lamp";
- 
-export default function LampSection({ title }: { title: string }) {
+import { motion } from "motion/react";
+
+export default function LampSection({text}: { text?: string }) {
   return (
     <LampContainer>
-      <motion.h2
+      <motion.h1
         initial={{ opacity: 0.5, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         transition={{
@@ -17,8 +14,8 @@ export default function LampSection({ title }: { title: string }) {
         }}
         className="mt-8 bg-gradient-to-br from-slate-300 to-slate-500 py-4 bg-clip-text text-center text-4xl font-medium tracking-tight text-transparent md:text-7xl"
       >
-       {title}
-      </motion.h2>
+        {text || "Build lamps <br /> the right way"}
+      </motion.h1>
     </LampContainer>
   );
 }

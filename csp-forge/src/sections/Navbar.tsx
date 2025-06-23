@@ -62,7 +62,7 @@ export function NavbarDemo() {
               </a>
             ))}
             <div className="flex w-full flex-col gap-4">
-             
+             <LocaleSwitcher />
             </div>
           </MobileNavMenu>
         </MobileNav>

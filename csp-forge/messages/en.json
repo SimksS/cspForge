@@ -112,5 +112,9 @@
   "Metadata": {
     "title": "CSP Forge – Easy and Intuitive Content Security Policy Generator",
     "description": "Create and manage CSP policies with secure presets, granular control, and a developer-focused interface."
+  },
+  "CSPGenerate": {
+    "title": "CSP Forge - Generate",
+    "description": "A tool to generate and manage Content Security Policies (CSP) for web applications."
   }
 }

@@ -5,13 +5,14 @@ import React from 'react';
 import { Button as MovingButton } from '@/components/ui/moving-border';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useTranslations } from 'next-intl';
+import { getTranslations } from 'next-intl/server';
 import { ShieldCheck, BrainCircuit, Wrench } from 'lucide-react';
 import { ContainerScroll } from '@/components/ui/container-scroll-animation';
 import { Badge } from '@/components/ui/badge';
 import { Spotlight } from '@/components/ui/spotlight-new';
 
 
-import { getTranslations } from 'next-intl/server';
+
 
 export async function generateMetadata({ params: { locale } }: { params: { locale: string } }) {
   const t = await getTranslations({ locale, namespace: 'Metadata' });
@@ -30,7 +31,7 @@ export default function LandingPage() {
       <section>
          <div className="h-[40rem] lg:h-[55rem] w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
           <Spotlight />
-          <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
+          <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-36 md:pt-0">
             <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent leading-normal bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
               {t('title')}
             </h1>
@@ -47,7 +48,7 @@ export default function LandingPage() {
         </div>
       </section>
       <section className="w-full lg:max-w-screen-xl mx-auto">
-          <div className="flex flex-col justify-center space-y-4 my-16">
+          <div className="flex flex-col justify-center space-y-4 my-16 max-lg:px-4">
                 <div className="space-y-2">
                   <p className="text-3xl font-bold tracking-tighter sm:text-4xl xl:text-5xl/none font-headline text-center xl:leading-normal">
                     {t('subtitle')}

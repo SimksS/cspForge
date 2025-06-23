@@ -87,7 +87,7 @@ export function CspGenerator() {
           </CardHeader>
           <CardContent>
             <Tabs value={preset} onValueChange={setPreset}>
-              <TabsList className="grid w-full grid-cols-3">
+              <TabsList className="grid w-full lg:grid-cols-3">
                 <TabsTrigger value="Strict"  className="flex flex-col items-center">
                   {t("strict.label")}
                   <span className="text-xs  block  whitespace-break-spaces">{t("strict.description")}</span>
