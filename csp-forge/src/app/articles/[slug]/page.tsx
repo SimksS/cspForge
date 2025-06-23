@@ -13,7 +13,8 @@ import Section from '@/components/Section';
 
 export async function generateMetadata({ params }: { params: { slug: string } }): Promise<Metadata> {
   const locale = await getUserLocale();
-  const filePath = join(process.cwd(), 'content', 'articles', `${params.slug}.${locale}.mdx`);
+    const { slug } = await params; 
+  const filePath = join(process.cwd(), 'content', 'articles', `${slug}.${locale}.mdx`);
 
   try {
     const raw = await readFile(filePath, 'utf-8');
